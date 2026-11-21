@@ -5,7 +5,7 @@ All random seeds are fixed in the scripts.
 
 ## Data
 The beta-HCG data of Section 5 are available from the first author upon request; place them as `data/bHCG.txt`.
-The simulations of Section 6 and the verification tests of the Appendix do not need the data.
+The simulations of Section 6 and the verification tests of the Appendix do not need the data; `mvt_blockcond.py` does.
 
 ## Modules
 - `smnlmm2.py`: the three-block Gibbs sampler with several components, component-specific mixing laws, tail
@@ -21,6 +21,8 @@ The simulations of Section 6 and the verification tests of the Appendix do not n
 | Section 6, simulated example with shared weights | `python3 p2_shared.py 105000` |
 | Section 6, Table on the information per subject | `python3 p2_info.py N1 D0` for N1 in {0, 15, 30} and D0 in {1, 4} |
 | Appendix, joint distribution tests | `python3 test_geweke2.py CASE 60000` for CASE in {multi, err, grid, gridlight, sl08} |
+| Appendix, normalizing functions of the tilted laws (against adaptive quadrature) and joint draw of the tail parameter and the weights (against the exact conditional law on the grid) | `python3 test_grid.py` |
+| Auxiliary check, not reported in the paper: block condition of Theorem 2 for multivariate Student-t random intercepts and slopes with a known shape matrix on the beta-HCG design (needs the data) | `python3 mvt_blockcond.py` |
 
 ## License
 
